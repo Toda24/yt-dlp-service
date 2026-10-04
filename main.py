@@ -10,6 +10,7 @@ def get_video_url(youtube_url: str):
         cmd = [
     "yt-dlp",
     "--cookies", "cookies.txt",
+    "--extractor-args", "youtube:player_client=ios",
     "-g",
     "-f", "18/mp4",
     youtube_url
